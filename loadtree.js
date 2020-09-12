@@ -71,8 +71,17 @@ function readTextFile(file) {
 	return promise;
 }
 
+
+function createFamilyTreeDataSource(familyTreeText) {
+	let lineageRe = /(?<gen>\d+? )(?<name>[\(\)\w -]+? )#(?<number>\d{0,4} )(?<birth>b\. [?\w-]{8}){0,1} {0,1}(?<birthlocation>[\w-, ]+ ){0,1} {0,1}(?<death>d\. [?\w-]{8}){0,1} {0,1}(?<deathlocation>[\w-, ]+ ){0,1} {0,1}/gm
+
+	var matches = lineageRe.exec(familyTreeText);
+	console.log("createFamilyTreeDataSource -> matches", matches)
+}
+
 readTextFile("family_tree.txt").then(
 	function (result) {
+		createFamilyTreeDataSource(result)
 		loadTree(defaultTreeData);
 	}
 );
