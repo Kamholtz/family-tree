@@ -2,3 +2,8 @@
 (?<gen>\d+? )(?<name>[\(\)\w -]+? )#(?<number>\d{0,4} )(?<birth>b\. [?\w-]{8}){0,1} {0,1}(?<birthlocation>[\w-, ]+ ){0,1} {0,1}(?<death>d\. [?\w-]{8}){0,1} {0,1}(?<deathlocation>[\w-, ]+ ){0,1} {0,1}
 
 https://regex101.com/r/fgX6HR/3
+
+
+m\. (?<name>[\(\)\w -?]+?) {0,1}#(?<number>\d{0,4}) {0,1}(?<marriagedate>m\. [?\w-]{0,10}){0,1} {0,1}(?<marriagelocation>[\w-, ]+ ){0,1} {0,1}(?<birth>b\. [?\w-]{8,10}){0,1} {0,1}(?<birthlocation>[\w-, ]+ ){0,1} {0,1}(?<death>d\. [?\w-]{8}){0,1} {0,1}(?<deathlocation>[\w-, ]+){0,1} {0,1}
+
+\[(?<offpringtype>\w+) of (?<personname>[\w\(\) ]+) {0,1}#{0,1}(?<personnumber>\d+){0,1} {0,1}and (?<spousename>[\w ]+) {0,1}#{0,1}(?<spousenumber>\d+){0,1}\]
